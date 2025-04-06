@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/CRUD-TEST?serverTimezone=Asia/Seoul
+    username: root
+    password: 1111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+    show-sql: true
+
+  server:
+    port: 8080
